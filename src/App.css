@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: #2F4050;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.Task {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .SidebarItem {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
   color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.SidebarList .SidebarItem:hover {
+  background-color: #3C4452;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SidebarList #active {
+  background-color: #3C4452;
+  border-radius: 10px;
+  cursor: inherit;
+  
+}
+
+.SidebarItem #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.SidebarItem #title {
+  flex: 70%;
+}
+
+.Allboards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.Table {
+  text-align: center;
+  width: 100%;
+  text-align-last: right;
+}
+
+.createBoard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.CreateTask {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
 }
